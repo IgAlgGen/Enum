@@ -1,10 +1,7 @@
-import Drivers.License_B;
-import Drivers.License_C;
-import Drivers.License_D;
-import Transport.Bus;
-import Transport.Car;
-import Transport.Track;
-import Transport.Transport;
+import Drivers.*;
+
+import Transport.*;
+
 
 public class Solution {
     public static void main(String[] args) {
@@ -12,6 +9,7 @@ public class Solution {
                 "Lada",
                 "Kalina",
                 1.6,
+                " Седан",
                 new License_B(
                         "Ivan Ivanov",
                         true,
@@ -20,6 +18,7 @@ public class Solution {
                 "LIaZ",
                 "Moon Rider",
                 3.,
+                45,
                 new License_D(
                         "Petr Petrov",
                         true,
@@ -29,6 +28,7 @@ public class Solution {
                 "Kamaz",
                 "6520",
                 8.,
+                50,
                 new License_C(
                         "Sidor Sidorov",
                         true,
@@ -38,6 +38,11 @@ public class Solution {
         printSolution(car1);
         printSolution(bus1);
         printSolution(track1);
+
+        car1.printType();
+        bus1.printType();
+        track1.printType();
+
     }
 
     public static void printSolution(Transport<?> transport) {

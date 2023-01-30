@@ -5,7 +5,7 @@ import Drivers.DriverInfo;
 import static Transport.Verifications.*;
 
 
-public abstract class Transport<T extends DriverInfo> implements Emulous{
+public abstract class Transport<T extends DriverInfo> implements Emulous {
     private String mark, model;
     private double engineVolume;
     private T driverInfo;
@@ -16,6 +16,8 @@ public abstract class Transport<T extends DriverInfo> implements Emulous{
         setEngineVolume(engineVolume);
         setDriverInfo(driverInfo);
     }
+
+    abstract public void printType();
 
     public void startMoving() {
 
